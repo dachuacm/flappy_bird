@@ -8,6 +8,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import com.example.modelo.Game;
+
 /**
  * JavaFX App
  */
@@ -17,9 +19,12 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
-        stage.setScene(scene);
+        //scene = new Scene(loadFXML("primary"), 640, 480);
+        //stage.setScene(scene);
+        Game game = new Game();
+        stage.setScene(game.getScene());
         stage.show();
+        game.start();
     }
 
     static void setRoot(String fxml) throws IOException {

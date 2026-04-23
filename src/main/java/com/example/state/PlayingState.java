@@ -1,17 +1,24 @@
 package com.example.state;
 
+import com.example.modelo.Bird;
+import com.example.modelo.Game;
+
 public class PlayingState implements GameState {
+Game game;
+
+    public PlayingState(Game game) {
+        this.game = game;
+    }
 
     @Override
     public void update() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'update'");
+    game.getBird().update();
     }
 
     @Override
     public void handleInput() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'handleInput'");
+          ((Bird)game.getBird()).jump(); 
     }
+
 
 }
