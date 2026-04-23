@@ -30,6 +30,7 @@ public class Game {
         root.setPrefSize(400, 600);
 
         bird = new Bird(50, 100);
+        
         root.getChildren().addAll(bird, scoreText);
         
         scoreText.setTranslateY(20);

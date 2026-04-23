@@ -4,7 +4,7 @@ import com.example.modelo.Bird;
 import com.example.modelo.Game;
 
 public class PlayingState implements GameState {
-Game game;
+private Game game;
 
     public PlayingState(Game game) {
         this.game = game;

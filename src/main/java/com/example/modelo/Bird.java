@@ -7,7 +7,8 @@ import javafx.scene.image.Image;
 public class Bird extends GameObject {
    private static final double GRAVITY = 0.2;
    private static final double JUMP_STRENGTH = -5;
-    public Bird(double x, double y) {
+   
+   public Bird(double x, double y) {
          super(x, y);
          velocityY = 0;
          setFitWidth(40);
