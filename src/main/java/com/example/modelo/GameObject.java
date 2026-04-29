@@ -1,5 +1,8 @@
 package com.example.modelo;
 
+import java.io.InputStream;
+
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public abstract class GameObject extends ImageView {
@@ -18,5 +21,15 @@ public abstract class GameObject extends ImageView {
         return this.getBoundsInParent().
         intersects(
             other.getBoundsInParent());
+    }
+
+    public void asignarImagen(String ruta){
+
+        InputStream imagen=getClass()
+        .getResourceAsStream(
+            ruta);
+
+        Image objectImage = new Image(imagen);
+        setImage(objectImage);
     }
 }

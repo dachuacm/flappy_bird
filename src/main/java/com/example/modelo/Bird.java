@@ -13,13 +13,21 @@ public class Bird extends GameObject {
          velocityY = 0;
          setFitWidth(40);
          setFitHeight(30);
-        InputStream imagen=getClass()
+        
+        /*  InputStream imagen=getClass()
         .getResourceAsStream(
             "/images/bird.png");
 
         Image birdImage = new Image(imagen);
         setImage(birdImage);
+         InputStream imagen=getClass()
+        .getResourceAsStream(
+            "/images/bird.png");
 
+        Image birdImage = new Image(imagen);
+        setImage(birdImage);
+       */
+      asignarImagen("/images/bird.png");
 
      }
 
